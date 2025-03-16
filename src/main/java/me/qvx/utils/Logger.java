@@ -1,4 +1,4 @@
-package me.qvx.Utils;
+package me.qvx.utils;
 
 public class Logger {
     private static final String ANSI_RESET = "\u001B[0m";
