@@ -1,7 +1,7 @@
 package me.qvx.commands.play;
 
 import me.qvx.commands.Command;
-import me.qvx.musicplayer.PlayerManager;
+import me.qvx.music.PlayerManager;
 import net.dv8tion.jda.api.entities.channel.concrete.VoiceChannel;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;

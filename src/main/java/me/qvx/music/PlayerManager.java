@@ -1,4 +1,4 @@
-package me.qvx.musicplayer;
+package me.qvx.music;
 
 import com.sedmelluq.discord.lavaplayer.player.AudioLoadResultHandler;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
@@ -39,7 +39,7 @@ public class PlayerManager {
 
     public GuildMusicManager getGuildMusicManager(Guild guild) {
         return musicManagers.computeIfAbsent(guild.getId(), _ -> {
-            GuildMusicManager guildMusicManager = new GuildMusicManager(audioPlayerManager);
+            GuildMusicManager guildMusicManager = new GuildMusicManager(guild, audioPlayerManager);
             guild.getAudioManager().setSendingHandler(guildMusicManager.getSendHandler());
             return guildMusicManager;
         });

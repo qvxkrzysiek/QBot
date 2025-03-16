@@ -2,6 +2,7 @@ package me.qvx.commands;
 
 import lombok.Getter;
 import me.qvx.commands.play.PlayCommand;
+import me.qvx.commands.setmusicchannel.SetMusicChannel;
 import net.dv8tion.jda.api.hooks.EventListener;
 
 import java.util.ArrayList;
@@ -27,9 +28,12 @@ public class CommandsManager {
 
     private void registerCommands() {
         PlayCommand playCommand  = new PlayCommand();
+        SetMusicChannel setMusicChannel = new SetMusicChannel();
 
         listenerAdapters.add(playCommand);
+        listenerAdapters.add(setMusicChannel);
         commands.add(playCommand);
+        commands.add(setMusicChannel);
     }
 
     public <T> Command<T> getCommand(Class<? extends Command<T>> commandClass) {
